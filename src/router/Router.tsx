@@ -4,8 +4,8 @@ import {
 } from "react-router-dom";
 import React, { lazy } from "react";
 import App from "@/app/page";
+import Ghar from "../ui/Home";
 
-const Home = lazy(() => import("../ui/Home"));
 const About = lazy(() => import("../ui/About"));
 const Contact = lazy(() => import("../ui/Contact"));
 const Work = lazy(() => import("../ui/Work"))
@@ -18,7 +18,7 @@ const allRoutes = [
         children: [
             {
                 path: 'home',
-                element: <Home />
+                element: <Ghar />
             },
             {
                 path: 'about',

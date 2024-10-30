@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Home() {
+export default function Ghar() {
     
     return(
         <section id="home" className="text-center px-5 py-16">
