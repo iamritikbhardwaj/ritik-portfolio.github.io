@@ -1,7 +1,7 @@
 import React from "react";
 import { GiSwitchWeapon } from "react-icons/gi";
 import { SiNextdotjs, SiMui, SiSpring, SiMongodb, SiMysql, SiExpress } from "react-icons/si";
-import { FaReact, FaLinux, FaGitAlt, FaNodeJs, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaReact, FaLinux, FaGitAlt, FaNodeJs } from "react-icons/fa";
 import { GoProject } from "react-icons/go";
 
 
@@ -24,11 +24,11 @@ export default function Work() {
     ]
 
     return(
-        <>
+        <div>
         <section id="work" className="text-center px-5 py-16 ">
                 <h2 className="mb-2 text-3xl">Featured Projects</h2>
                 <div className=" p-5 block justify-center text-center overflow-x-auto">
-                {projects.map((project, index) =>(<div className="my-3" key="index"><div className="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
+                {projects.map((project, no) =>(<div className="my-3" key="no"><div className="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
   <div>
     <span className="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
       <GoProject className="h-6 w-6 text-white" />
@@ -62,6 +62,6 @@ export default function Work() {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }

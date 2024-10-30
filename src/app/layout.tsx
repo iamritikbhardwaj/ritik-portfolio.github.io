@@ -1,12 +1,9 @@
 "use client"
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/ui/Header";
-import Footer from "@/ui/Footer";
 import { Suspense } from "react";
 import { Outlet, RouterProvider } from "react-router-dom";
 import router from "@/router/Router";
-import Home from "./page";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

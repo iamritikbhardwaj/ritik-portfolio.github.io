@@ -6,7 +6,7 @@ interface EmailProps {
   userurl: string; // Added url to the interface
 }
 
-export default function SendEmails({ username, userurl }: EmailProps): JSX.Element {
+export default function SendEmails({ username, userurl }: Readonly<EmailProps>): JSX.Element {
   return (
     <Html lang="en">
       <Button className='bg-slate-600 text-white rounded' href={userurl}>Click me</Button>

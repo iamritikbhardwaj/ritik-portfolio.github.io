@@ -10,9 +10,8 @@ export default function Footer() {
                 <p className="text-sm">© 2024 Ritik Singh. All rights reserved.</p>
             </div>
             <div className="flex space-x-4">
-                <a href="#" className="hover:text-gray-400">Privacy Policy</a>
-                <a href="#" className="hover:text-gray-400">Terms of Service</a>
-                <a href="#" className="hover:text-gray-400">Contact</a>
+                <button className="hover:text-gray-400">Privacy Policy</button>
+                <button className="hover:text-gray-400">Terms of Service</button>
             </div>
         </div>
     </footer>
