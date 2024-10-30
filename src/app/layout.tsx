@@ -3,9 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/ui/Header";
 import Footer from "@/ui/Footer";
-import { RouterProvider } from "react-router-dom";
 import { Suspense } from "react";
-import router from "@/router/Router";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,7 +25,7 @@ export default function RootLayout() {
       >
         <Suspense fallback={<div>Loading...</div>}>
       <Header />
-      <RouterProvider router={router} />
+      
       <Footer />
     </Suspense>
         

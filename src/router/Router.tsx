@@ -3,18 +3,18 @@ import {
     createBrowserRouter
 } from "react-router-dom";
 import React, { lazy } from "react";
-import App from "@/app/page";
-import Ghar from "../ui/Home";
+import Home from "@/app/page";
 
 const About = lazy(() => import("../ui/About"));
 const Contact = lazy(() => import("../ui/Contact"));
 const Work = lazy(() => import("../ui/Work"))
+const Ghar = lazy(() => import("../ui/Home"))
 
 
 const allRoutes = [
     {
         path: '/',
-        element: <App />,
+        element: <Home />,
         children: [
             {
                 path: 'home',
