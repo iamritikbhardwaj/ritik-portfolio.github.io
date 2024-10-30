@@ -12,7 +12,25 @@ const Work = lazy(() => import("../ui/Work"))
 const allRoutes = [
     {
         path: '/',
-        element: <Home />
+        element: <Home />,
+        children: [
+            {
+                path: '/home',
+                element: <Home />
+            },
+            {
+                path: '/about',
+                element: <About />
+            },
+            {
+                path: '/contact',
+                element: <Contact />
+            },
+            {
+                path: '/work',
+                element: <Work />
+            }
+        ]
     }
 ];
 
