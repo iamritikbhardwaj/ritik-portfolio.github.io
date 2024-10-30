@@ -1,12 +1,15 @@
 "use client";
-import router from "@/router/Router";
+import Footer from "@/ui/Footer";
 import Header from "@/ui/Header";
-import { RouterProvider } from "react-router-dom";
+import { useRouter } from "next/router";
+import { Outlet, RouterProvider } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className=" mx-3 ">
-     <RouterProvider router={router} />
+    <div id="root" className=" mx-3 ">
+     <Header />
+     <Outlet />
+     <Footer />
     </div>
   );
 }
