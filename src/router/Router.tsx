@@ -3,25 +3,18 @@ import {
 } from "react-router-dom";
 import React, { lazy } from "react";
 
-const Home = lazy(() => import("../ui/Home"));
-const Header = lazy(() => import("../ui/Header"));
+const Home = lazy(() => import("../ui/Home1"));
+const About = lazy(() => import("../ui/About"));
+const Contact = lazy(() => import("../ui/Contact"));
+const Work = lazy(() => import("../ui/Work"))
 
-// Placeholder component for the '/about' route
-const About = () => <div>About Page</div>;
 
 const allRoutes = [
     {
-        path: '/home',
+        path: '/',
         element: <Home />
-    },
-    {
-        path: '/about',
-        element: <About />
-    },
-    {
-        path: '/header',
-        element: <Header />
-    },
+    }
 ];
 
 const router = createBrowserRouter(allRoutes);
+export default router;

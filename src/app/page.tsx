@@ -1,9 +1,10 @@
-import Header from "@/ui/Header";
+import React from "react";
+import RootLayout from "./layout";
 
 export default function Home() {
   return (
-    <div className=" mx-3 ">
-     <Header />
-    </div>
+    <>
+    <RootLayout />
+    </>
   );
 }

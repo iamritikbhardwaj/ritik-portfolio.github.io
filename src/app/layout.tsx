@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/ui/Header";
+import { RouterProvider } from "react-router-dom";
+import router from "@/router/Router";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,6 +32,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Header />
+    <RouterProvider router={router} />
+    <footer />
       </body>
     </html>
   );
