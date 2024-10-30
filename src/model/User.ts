@@ -1,49 +1,66 @@
-import mongoose from "mongoose";
-import { Schema, Document } from "mongoose";
+import mongoose ,{ Schema, Document } from "mongoose";
 
-export interface User extends Document{
+export interface Message extends Document{
+    content: string
     createdAt: Date;
-    name: string,
-    email: string,
-    message: string,
-    website: string,
-    isHiring: boolean,
-    isRecruter: boolean
 }
 
-const UserSchema : Schema<User> = new Schema({
+const MessageSchema : Schema<Message> = new Schema({
+    content: {
+        type: String,
+        required: true,
+    },
     createdAt: {
         type: Date,
         required: true,
         default: Date.now
-    },
-    name: {
+    }
+
+})
+
+export interface User extends Document{
+    username: string;
+    email: string;
+    password: string;
+    verifyCode: string;
+    verifyCodeExpiry: Date;
+    isVerified: boolean;
+    isAcceptingMessage: boolean;
+    message: Message[];
+}
+
+const UserSchema : Schema<User> = new Schema({
+    username: {
         type: String,
-        required: true
+        required: [true, "Username is required"]
     },
     email: {
         type: String,
-        required: true
+        required: [true, "Email is required"],
+        unique: true,
+        match: [/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,"Please enter a vilid email"]
     },
-    message: {
+    password: {
         type: String,
-        required: true,
+        required: [true, "Password is required"],
     },
-    website: {
+    verifyCode: {
         type: String,
-        required: false
+        required: [true, "Verify code is required"],
     },
-    isHiring: {
+    verifyCodeExpiry: {
+        type: Date,
+        required: [true, "Verify code expiry is required"],
+    },
+    isVerified: {
         type: Boolean,
-        required: false,
         default: false
     },
-    isRecruter: {
+    isAcceptingMessage: {
         type: Boolean,
-        required: false,
-        default: false
+        default: true
     },
-
+    message: [MessageSchema]
 })
 
 const UserModel = (mongoose.models.User as mongoose.Model<User>) || (mongoose.model<User>("User", UserSchema));

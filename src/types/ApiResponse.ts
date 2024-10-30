@@ -1,10 +1,8 @@
-import { User } from "@/model/User";
+import { Message } from "@/model/User";
 
 export interface ApiResponse{
     success: boolean,
     message: string,
-    name?: string,
-    email?: string,
-    isHiring?: boolean,
-    isRecruter?: boolean
+    isAcceptingMessages?: boolean,
+    messages?: Array<Message>,
 }

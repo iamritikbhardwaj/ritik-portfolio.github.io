@@ -10,7 +10,7 @@ export default function Header() {
 
     return (
             <div className="px-4 md:px-8 lg:px-12 bg-slate-800 dark:bg-green-900">
-                <nav className="m-4 py-4 text-white  block md:flex justify-between">
+                <nav className="m-4 py-4 text-white flex justify-between">
                     <ul className="block md:flex">
                         <li><button
                          onClick={() => navigate("/home")} 
