@@ -1,10 +1,8 @@
-import React from "react";
-import RootLayout from "./layout";
+import Header from "@/ui/Header";
 
-export default function Home() {
+export default function App() {
   return (
-    <>
-    <RootLayout />
-    </>
+    <div className=" mx-3 ">
+    </div>
   );
 }
