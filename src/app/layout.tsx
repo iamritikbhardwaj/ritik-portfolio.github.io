@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Suspense } from "react";
 import { Outlet, RouterProvider } from "react-router-dom";
-import router from "@/router/Router";
+import router from "@/ui/router/Router";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
